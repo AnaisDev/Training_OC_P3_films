@@ -15,13 +15,13 @@
           @sliding-end="onSlideEnd"
         >
           <b-carousel-slide>
-            <img slot="img" class="img-carousel" src="/src/assets/seraphine.jpg" alt="seraphine">
+            <img slot="img" class="img-carousel" src="@/assets/seraphine.jpg" alt="seraphine">
           </b-carousel-slide>
           <b-carousel-slide>
-            <img slot="img" src="/src/assets/demain-des-l-aube.jpg" alt="demain-des-l-aube">
+            <img slot="img" src="@/assets/demain-des-l-aube.jpg" alt="demain-des-l-aube">
           </b-carousel-slide>
           <b-carousel-slide>
-            <img slot="img" src="/src/assets/facteur-cheval.jpg" alt="facteur-cheval">
+            <img slot="img" src="@/assets/facteur-cheval.jpg" alt="facteur-cheval">
           </b-carousel-slide>
         </b-carousel>
       </b-col>

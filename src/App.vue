@@ -20,15 +20,14 @@ export default {
 
 <style>
 .carousel-indicators {
-  position: relative;
-  list-style: outside;
-  margin: 0 0 0 22px;
+  position: relative !important;
+  list-style: outside !important;
+  margin: 0 0 0 22px !important;
 }
-
 .carousel-indicators li {
-  width: 0px;
-  margin: 0 10px;
-  padding: 0;
+  width: 0px !important;
+  margin: 0 10px !important;
+  padding: 0 !important;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -42,9 +41,10 @@ export default {
 }
 @font-face {
   font-family: 'neon';
-  src: url('/src/assets/NEON ABSOLUTE SANS1.eot') format('eot'),
-    url('/src/assets/NEON ABSOLUTE SANS1.ttf') format('woff'),
-    url('/src/assets/NEON ABSOLUTE SANS1.svg') format('truetype'),
-    url('/src/assets/NEON ABSOLUTE SANS1.woff') format('svg');
+
+  src: url('~@/assets/fonts/NEON ABSOLUTE SANS1.eot') format('eot'),
+    url('~@/assets/fonts/NEON ABSOLUTE SANS1.ttf') format('woff'),
+    url('~@/assets/fonts/NEONABSOLUTESANS1Regular.svg') format('truetype'),
+    url('~@/assets/fonts/NEONABSOLUTESANS1Regular.woff') format('svg');
 }
 </style>

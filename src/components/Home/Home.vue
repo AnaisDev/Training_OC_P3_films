@@ -5,7 +5,7 @@
         <b-col lg="12" md="12">
           <p>
             <a href="#">
-              <b-img fluid src="/src/assets/films-sous-les-etoiles.jpg" alt="Logo du festival"/>
+              <b-img fluid src="@/assets/films-sous-les-etoiles.jpg" alt="films-sous-les-etoiles"/>
             </a>
           </p>
         </b-col>

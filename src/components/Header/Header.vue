@@ -5,7 +5,7 @@
         <b-col xl="2" lg="3" md="3" ms="12">
           <p>
             <a href="#">
-              <b-img src="/src/assets/logo.png" alt="Logo du festival"/>
+              <b-img src="@/assets/logo.png" alt="Logo du festival"/>
             </a>
           </p>
         </b-col>
