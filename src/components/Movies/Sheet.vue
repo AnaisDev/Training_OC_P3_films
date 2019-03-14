@@ -91,11 +91,14 @@ export default {
 .h1 h1 {
   text-align: left;
   font-size: 1em !important;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  color: cornflowerblue;
 }
 
 h2 {
   color: darkmagenta;
   font-size: 1.5em;
+  font-family: 'neon';
 }
 
 h4 {
@@ -119,12 +122,6 @@ h4 {
 .btn-outline-primary {
   color: #080816;
   background-color: cornflowerblue;
-  border-color: cornflowerblue;
-}
-
-.btn-outline-primary:hover {
-  color: cornflowerblue;
-  background-color: #080816;
   border-color: cornflowerblue;
 }
 
