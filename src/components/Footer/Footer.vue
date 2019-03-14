@@ -60,9 +60,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .footer {
-  padding: 0 15px;
+  margin: 40px auto 0 auto;
+  padding: 10px 15px;
   text-align: left;
   font-size: 0.8em;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.2);
 }
 </style>
 
