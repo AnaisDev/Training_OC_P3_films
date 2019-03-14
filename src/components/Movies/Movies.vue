@@ -14,15 +14,7 @@
           @sliding-start="onSlideStart"
           @sliding-end="onSlideEnd"
         >
-          <b-carousel-slide>
-            <img slot="img" class="img-carousel" src="@/assets/seraphine.jpg" alt="seraphine">
-          </b-carousel-slide>
-          <b-carousel-slide>
-            <img slot="img" src="@/assets/demain-des-l-aube.jpg" alt="demain-des-l-aube">
-          </b-carousel-slide>
-          <b-carousel-slide>
-            <img slot="img" src="@/assets/facteur-cheval.jpg" alt="facteur-cheval">
-          </b-carousel-slide>
+          <CarouselMovies/>
         </b-carousel>
       </b-col>
     </b-row>
@@ -47,10 +39,11 @@
 </template>
 
 <script>
+import CarouselMovies from './CarouselMovies.vue';
 import Sheet from './Sheet.vue';
 export default {
   name: 'Movies',
-  components: { Sheet },
+  components: { Sheet, CarouselMovies },
   data() {
     return {
       slide: 0,

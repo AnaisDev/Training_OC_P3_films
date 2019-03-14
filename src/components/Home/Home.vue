@@ -1,7 +1,7 @@
 <template>
-  <b-container fluid>
-    <header>
-      <b-row align-v="center">
+  <b-container fluid class="home">
+    <b-row align-v="center">
+      <header>
         <b-col lg="12" md="12">
           <p>
             <a href="#">
@@ -9,17 +9,165 @@
             </a>
           </p>
         </b-col>
-      </b-row>
-    </header>
+      </header>
+    </b-row>
+
+    <b-row align-v="start">
+      <b-col xl="12" lg="12" md="12" sm="12">
+        <b-col lg="7" md="12" class="description">
+          <b-row align-v="start">
+            <h1>LE FESTIVAL DES FILMS DE PLEIN AIR</h1>
+          </b-row>
+          <b-row align-v="start">
+            <b-col lg="5" md="4" class="movies-crsl">
+              <b-carousel
+                id="carousel"
+                style="text-shadow: 1px 1px 2px #333;"
+                controls
+                indicators
+                background="none"
+                :interval="0"
+                v-model="slide"
+                @sliding-start="onSlideStart"
+                @sliding-end="onSlideEnd"
+              >
+                <CarouselMovies/>
+              </b-carousel>
+              <p>
+                <a href="/films">Voir les films projetés.</a>
+              </p>
+            </b-col>
+            <b-col lg="7" md="8">
+              <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. "
+                <br>
+                <a href="/reservation">Programme et réservation</a>
+              </p>
+            </b-col>
+          </b-row>
+
+          <b-row align-v="start" class="park">
+            <b-col lg="12" md="12">
+              <b-row align-v="start">
+                <h2>Le parc Monceau à Paris :</h2>
+              </b-row>
+              <b-row align-v="start">
+                <b-col lg="7" md="7">
+                  <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. "
+                    <br>
+                    <a href="/pratique">Informations pratiques</a>
+                  </p>
+                </b-col>
+                <b-col lg="5" md="5">
+                  <p>
+                    <a href="#">
+                      <b-img fluid src="@/assets/Parc_Monceau_Paris.jpg" alt="parc-monceau"/>
+                    </a>
+                  </p>
+                </b-col>
+              </b-row>
+            </b-col>
+          </b-row>
+        </b-col>
+
+        <b-col lg="4" md="12" class="news">
+          <b-row align-v="start">
+            <h3>Actualités du festival :</h3>
+          </b-row>
+          <b-row align-v="start">
+            <b-col lg="12" md="12">
+              <b-img fluid src="@/assets/popcorns.jpg" alt="parc-monceau"/>
+              <h4>Titre article :</h4>
+            </b-col>
+            <b-col lg="12" md="12">
+              <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. "
+                <br>
+                <a href="/actualites">Voir les autres actualités</a>
+              </p>
+            </b-col>
+          </b-row>
+        </b-col>
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
 <script>
+import CarouselMovies from '../Movies/CarouselMovies.vue';
 export default {
   name: 'Home',
+  components: {
+    CarouselMovies,
+  },
+  data() {
+    return {
+      slide: 0,
+      sliding: null,
+    };
+  },
+  methods: {
+    onSlideStart(slide) {
+      this.sliding = true;
+    },
+    onSlideEnd(slide) {
+      this.sliding = false;
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h1 {
+  color: cornflowerblue;
+  font-family: 'neon';
+  font-size: 2em;
+}
+h2 {
+  color: darkmagenta;
+  font-size: 1.5em;
+  padding: 0 0 0 15px;
+}
+
+h3 {
+  color: darkmagenta;
+  font-size: 1.5em;
+}
+.description {
+  margin: 0 10px 0px 25px;
+}
+.home {
+  text-align: justify;
+}
+
+.news {
+  margin: 0 0 0 30px;
+}
+.news h3 {
+  padding: 0 0 20px 15px;
+}
+.news h4 {
+  padding: 15px 0 0 0;
+}
+
+.carousel {
+  margin-bottom: 10px;
+}
+.movies-crsl p {
+  text-align: center;
+}
+
+.park {
+  margin-top: 30px;
+}
+
+@media all and (max-width: 992px) {
+  .description,
+  .news {
+    width: 80%;
+    margin: 10px auto 0px auto;
+  }
+  h1 {
+    margin: 10px 5px 0 25px;
+  }
+}
 </style>
