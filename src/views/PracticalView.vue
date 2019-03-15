@@ -1,16 +1,17 @@
 <template>
   <div class="Nav">
-   
+    <Practical/>
   </div>
 </template>
 
 <script>
-    export default {
-        name: 'PracticalView'
-    }
+import Practical from '../components/Practical/Practical.vue';
+export default {
+  name: 'PracticalView',
+  components: { Practical },
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>
 
