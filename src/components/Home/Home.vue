@@ -122,8 +122,6 @@ export default {
 }
 h1 {
   margin-bottom: 20px !important;
-  color: cornflowerblue;
-  font-family: 'neon';
   font-size: 1.8em;
 }
 h2 {

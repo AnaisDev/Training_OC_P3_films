@@ -29,6 +29,17 @@ export default {
   margin: 0 10px !important;
   padding: 0 !important;
 }
+
+h1 {
+  color: cornflowerblue;
+  font-family: 'neon';
+}
+
+h2 {
+  color: darkmagenta;
+  font-size: 1.5em;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
