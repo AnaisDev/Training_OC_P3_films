@@ -98,7 +98,6 @@ export default {
 .sheet-component {
   padding: 20px;
   box-shadow: 0px 0px 2px cornflowerblue;
-  /* border: 1px solid cadetblue; */
   border-radius: 10px;
 }
 </style>

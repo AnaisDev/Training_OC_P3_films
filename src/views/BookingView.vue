@@ -1,5 +1,5 @@
 <template>
-  <div class="Nav">
+  <div>
     <Booking/>
   </div>
 </template>

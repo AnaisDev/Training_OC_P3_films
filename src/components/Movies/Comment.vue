@@ -26,20 +26,14 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
+@import '@/assets/custom.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
 input,
 .form-control {
   margin: 5px 0;
-  background-color: #080816;
+  background-color: $navy-blue;
   border: 1px solid;
-}
-
-.btn {
-  background-color: #202033;
-  border-color: #202033;
-}
-
-.btn:hover {
-  background-color: #080816;
 }
 </style>

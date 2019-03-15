@@ -7,7 +7,7 @@
     </b-row>
     <b-row align-v="start" align-h="between" class="park">
       <b-col xl="12">
-        <h1>LE PARC MONCEAU À PARIS</h1>
+        <h1 class="h1-title">LE PARC MONCEAU À PARIS</h1>
       </b-col>
       <b-col xl="7" lg="7" md="7">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae orci ut ipsum rhoncus consectetur sed in felis. Aliquam vel venenatis turpis. Pellentesque vel nisi et tortor fringilla maximus non sit amet nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas nec accumsan felis. Cras lacinia ex mi, quis hendrerit tortor finibus tempor. Vestibulum dignissim turpis dolor, sed euismod dui ultricies non. Donec bibendum sem sit amet commodo vestibulum. Cras consectetur metus enim, venenatis tempor ante tempor ac. Sed blandit diam eu interdum tristique. Nulla facilisi. Phasellus viverra eu nunc id eleifend. Sed cursus sit amet nisi malesuada molestie. In hac habitasse platea dictumst.</p>
@@ -33,7 +33,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import '@/assets/custom.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
 h1 {
   font-size: 1.5em;
   text-align: left;
@@ -63,7 +66,7 @@ p {
 }
 .toGo {
   padding: 10px;
-  border-left: 5px solid #202033;
+  border-left: 5px solid $dark-purple;
   margin-left: 15px;
 }
 

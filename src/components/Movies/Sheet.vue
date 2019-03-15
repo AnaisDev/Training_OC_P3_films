@@ -77,7 +77,11 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
+@import '@/assets/custom.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+
 .row {
   margin: 0;
 }
@@ -92,11 +96,11 @@ export default {
   text-align: left;
   font-size: 1em !important;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  color: cornflowerblue;
+  color: $light-grey;
 }
 
 h2 {
-  color: darkmagenta;
+  color: cornflowerblue;
   font-size: 1.5em;
   font-family: 'neon';
 }
@@ -119,12 +123,6 @@ h4 {
   font-size: 1.5em;
 }
 
-.btn-outline-primary {
-  color: #080816;
-  background-color: cornflowerblue;
-  border-color: cornflowerblue;
-}
-
 .title {
   text-align: left;
   padding: 10px 0;
@@ -138,12 +136,12 @@ h4 {
 .synopsis .text {
   text-align: justify;
   padding: 10px;
-  border-left: 5px solid #202033;
+  border-left: 5px solid $dark-purple;
 }
 
 .actors {
   padding: 10px;
-  border: 1px solid #202033;
+  border: 1px solid $dark-purple;
 }
 
 .synopsis p,
