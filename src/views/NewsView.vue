@@ -1,13 +1,15 @@
 <template>
   <div>
-   
+    <News/>
   </div>
 </template>
 
 <script>
-    export default {
-        name: 'ContactView'
-    }
+import News from '../components/News/News.vue';
+export default {
+  name: 'ContactView',
+  components: { News },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

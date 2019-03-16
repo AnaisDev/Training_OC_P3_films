@@ -4,7 +4,7 @@
       <b-col xl="1"></b-col>
       <b-col xl="10">
         <b-row>
-          <h1>RÉSERVATION</h1>
+          <h1 class="h1-title">RÉSERVATION</h1>
         </b-row>
 
         <b-row align-v="start" align-h="around">
@@ -62,15 +62,13 @@ export default {
 <style scoped>
 h1,
 h2 {
-  font-size: 1.5em;
   padding-left: 15px;
 }
 h3 {
   font-size: 1.2em;
-  color: darkmagenta;
 }
 .movie {
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 2px cornflowerblue;
   border-radius: 10px;
   margin: 20px 0;
   padding: 10px 0;
@@ -80,13 +78,5 @@ h3 {
 h3 {
   margin: 0;
   text-align: left;
-}
-
-.btn-outline-primary {
-  color: #080816;
-  background-color: cornflowerblue;
-  border-color: cornflowerblue;
-}
-@media all and (max-width: 992px) {
 }
 </style>

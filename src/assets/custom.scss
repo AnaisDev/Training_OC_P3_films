@@ -1,0 +1,126 @@
+// Include Bootstrap and BootstrapVue SCSS files
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+
+$navy-blue :#080816;
+$light-grey:#c2cdd8;
+$dark-purple:#202033;
+
+.carousel {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+.carousel-indicators {
+    position: relative !important;
+    list-style: outside !important;
+    margin: 0 0 0 22px !important;
+}
+.carousel-indicators li {
+    width: 0px !important;
+    margin: 0 10px !important;
+    padding: 0 !important;
+}
+
+.h1-title {
+    color: cornflowerblue;
+    font-family: 'neon';
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+  
+h2 {
+    color: darkmagenta;
+    font-size: 1.5em;
+}
+
+h3 {
+    color: darkmagenta;
+    font-size: 1.5em;
+  }
+  
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: $light-grey;
+    margin-top: 0px;
+    padding: 0;
+    background-color: $navy-blue;
+  }
+
+.fab {
+    padding : 0 5px 0 0 ;
+    font-size: 1.2em;
+}
+
+.btn-outline-primary {
+    color: $navy-blue !important;
+    background-color: cornflowerblue!important;
+    border-color: cornflowerblue!important;
+  }
+
+.btn-outline-primary:hover {
+    color: $light-grey !important;
+    background-color: $navy-blue!important;
+    border-color: darkblue!important;
+}
+
+.btn-dark {
+    background-color: $dark-purple!important;
+    border-color: $dark-purple!important;
+  }
+  
+.btn-dark:hover {
+    background-color: $navy-blue!important;
+}
+.card {
+    border:none!important;
+    background-color: $navy-blue!important;
+    box-shadow: 1px 1px 3px cornflowerblue;
+    border-radius:5px;
+}
+.card-body {
+    background-color: $navy-blue;
+}
+.card-text {
+    text-align: justify;
+}
+
+.card-left{
+    box-shadow: 0px 0px 2px cornflowerblue;
+    margin: 30px 0;
+    padding: 0 15px;
+    border-radius:5px;
+    text-align:justify;
+}
+.card-left .header{
+    padding:0px;
+   }
+   .card-left .text{
+    margin:0px;
+    padding:15px;
+   }
+
+.card-left .img-fluid{
+ height:320px;
+ width:100%;
+ max-width:100%;
+ padding:0;
+}
+
+.c-pane-container{
+background-color:$navy-blue!important;
+color:$light-grey!important;
+border-radius:5px;
+border: 1px solid cornflowerblue!important;
+}
+
+  @font-face {
+    font-family: 'neon'; 
+    src: url('~@/assets/fonts/NEON ABSOLUTE SANS1.eot') format('eot'),
+      url('~@/assets/fonts/NEON ABSOLUTE SANS1.ttf') format('woff'),
+      url('~@/assets/fonts/NEONABSOLUTESANS1Regular.svg') format('truetype'),
+      url('~@/assets/fonts/NEONABSOLUTESANS1Regular.woff') format('svg');
+  }

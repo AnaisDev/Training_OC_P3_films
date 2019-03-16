@@ -4,8 +4,20 @@ import BootstrapVue from 'bootstrap-vue';
 import router from './router';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import VCalendar from 'v-calendar';
+import 'v-calendar/lib/v-calendar.min.css';
 
 Vue.use(BootstrapVue);
+Vue.use(VCalendar, {
+  formats: {
+    title: 'MMMM YYYY',
+    weekdays: 'W',
+    navMonths: 'MMM',
+    input: ['L', 'YYYY-MM-DD', 'YYYY/MM/DD'],
+    dayPopover: 'L',
+    data: ['L', 'YYYY-MM-DD', 'YYYY/MM/DD'],
+  },
+});
 
 Vue.config.productionTip = false;
 

@@ -13,10 +13,9 @@
     </b-row>
 
     <b-row align-v="start" align-h="around">
-      <!-- <b-col xl="12" lg="12" md="12" sm="12"> -->
       <b-col xl="7" lg="8" md="12" class="description">
         <b-row align-v="start" class="description">
-          <h1>LE FESTIVAL DES FILMS DE PLEIN AIR</h1>
+          <h1 class="h1-title">LE FESTIVAL DES FILMS DE PLEIN AIR</h1>
         </b-row>
         <b-row align-v="start" align-h="center" class="description">
           <b-col xl="5" lg="6" md="6" class="movies-crsl">
@@ -86,7 +85,6 @@
           </b-col>
         </b-row>
       </b-col>
-      <!-- </b-col> -->
     </b-row>
   </b-container>
 </template>
@@ -120,28 +118,16 @@ export default {
 .img-header {
   padding: 0;
 }
-h1 {
-  margin-bottom: 20px !important;
-  font-size: 1.8em;
-}
+
 h2 {
-  color: darkmagenta;
-  font-size: 1.5em;
   padding: 0 0 0 15px;
 }
 
-h3 {
-  color: darkmagenta;
-  font-size: 1.5em;
-}
 .description {
   margin: 0 0px 0px 0px;
 }
 .home {
   text-align: justify;
-}
-.carousel {
-  text-align: center;
 }
 .news {
   margin: 0px;
@@ -153,9 +139,6 @@ h3 {
   padding: 15px 0 0 0;
 }
 
-.carousel {
-  margin-bottom: 10px;
-}
 .movies-crsl p {
   text-align: center;
 }
