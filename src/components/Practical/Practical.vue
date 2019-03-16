@@ -37,14 +37,7 @@ export default {
 @import '@/assets/custom.scss';
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap-vue/src/index.scss';
-h1 {
-  font-size: 1.5em;
-  text-align: left;
-}
-h2 {
-  font-size: 1.3em;
-  text-align: left;
-}
+
 p {
   text-align: justify;
 }
