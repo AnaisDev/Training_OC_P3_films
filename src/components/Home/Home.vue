@@ -155,7 +155,6 @@ h2 {
     margin: 10px auto 0px auto;
   }
   h1 {
-    font-size: 1.6em;
     margin: 10px 5px 0 25px;
   }
 }

@@ -2,7 +2,7 @@
   <b-container fluid>
     <b-row>
       <b-col xl="9">
-        <h1 class="h1-title">Dernière actualité du festival :</h1>
+        <h1 class="h1-title">DERNIÈRE ACTUALITÉ DU FESTIVAL :</h1>
         <b-row>
           <b-col xl="12" class="first-new">
             <b-card img-src="~@/assets/popcorns.jpg" img-alt="Popcorns" img-top class="mb-3">
@@ -96,10 +96,7 @@ export default {
 @import '@/assets/custom.scss';
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap-vue/src/index.scss';
-h1,
-h2 {
-  text-align: left;
-}
+
 .old-news {
   margin: 40px 0 0 0;
 }
