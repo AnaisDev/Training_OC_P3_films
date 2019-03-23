@@ -2,41 +2,15 @@
   <b-container fluid>
     <b-row>
       <b-col xl="9">
-        <h1 class="h1-title">DERNIÈRE ACTUALITÉ DU FESTIVAL :</h1>
         <b-row>
           <b-col xl="12" class="first-new">
-            <b-card
-              :img-src="getImgUrl(getLastNews.img)"
-              :img-alt="getLastNews.altImg"
-              img-top
-              class="mb-3"
-            >
+            <b-card :img-src="getImgUrl(getNewsToRead.img)" img-alt="Popcorns" img-top class="mb-3">
               <b-card-text>
-                <h4>{{getLastNews.title}}</h4>
-                {{getLastNews.text}}
+                <h1 class="h1-title">{{getNewsToRead.title}}</h1>
+                <p class="date">{{getNewsToRead.date}}</p>
+                <p>{{getNewsToRead.text}}</p>
               </b-card-text>
             </b-card>
-          </b-col>
-        </b-row>
-        <b-row>
-          <b-col xl="12" class="old-news">
-            <h2>Autres actualités du festival :</h2>
-
-            <div class="card-left" v-for=" news in getOldNews" :key="news.title">
-              <b-row align-v="center" align-h="center">
-                <b-col xl="5" class="header">
-                  <b-img fluid :src="getImgUrl(news.img)" :alt="news.altImg"/>
-                </b-col>
-                <b-col xl="7" class="text">
-                  <h4>{{news.title}}</h4>
-                  <p>
-                    {{news.text}}
-                    <br>
-                    <b-button variant="dark" @click="readNews(news)">Lire l'article</b-button>
-                  </p>
-                </b-col>
-              </b-row>
-            </div>
           </b-col>
         </b-row>
       </b-col>
@@ -65,9 +39,9 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
 export default {
-  name: 'News',
+  name: 'OneNew',
   data() {
     return {
       attrs: [
@@ -83,16 +57,11 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(['getOldNews', 'getLastNews']),
+    ...mapGetters(['getNewsToRead']),
   },
   methods: {
-    ...mapActions(['readNew']),
     getImgUrl(path) {
       return require('@/assets' + path);
-    },
-    readNews(news) {
-      this.readNew(news);
-      this.$router.push({ name: 'new' });
     },
   },
 };
@@ -103,9 +72,6 @@ export default {
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap-vue/src/index.scss';
 
-.old-news {
-  margin: 40px 0 0 0;
-}
 .list-historical {
   width: 80%;
   margin: 15px auto;
@@ -113,5 +79,8 @@ export default {
 }
 ul {
   text-align: justify;
+}
+.date {
+  color: darkmagenta;
 }
 </style>

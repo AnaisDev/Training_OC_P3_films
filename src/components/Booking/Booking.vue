@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="home">
+  <b-container fluid>
     <b-row>
       <b-col xl="1"></b-col>
       <b-col xl="10">
@@ -13,7 +13,7 @@
               <h2>Programme</h2>
             </b-row>
             <b-row
-              v-for="movie in movies"
+              v-for="movie in getMoviesBooking"
               :key="movie.title"
               align-v="center"
               align-h="around"
@@ -28,7 +28,7 @@
                 <p>Parc Monceau, Paris</p>
               </b-col>
               <b-col xl="2">
-                <b-button variant="outline-primary" href="/reserver">Réserver</b-button>
+                <b-button variant="outline-primary" @click="bookMovie(movie)">Réserver</b-button>
               </b-col>
             </b-row>
 
@@ -42,19 +42,25 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
 export default {
   name: 'Booking',
-  components: {},
   data() {
-    return {
-      movies: [
-        { title: 'Séraphine', date: '5 août 2019', time: '21h30' },
-        { title: "Demain dès l'aube", date: '6 août 2019', time: '21h30' },
-        { title: 'Le facteur cheval', date: '7 août 2019', time: '22h' },
-      ],
-    };
+    return {};
   },
-  methods: {},
+  methods: {
+    ...mapActions(['newMovieToBooking']),
+    bookMovie(movie) {
+      this.newMovieToBooking(movie);
+      this.$router.push({ name: 'bookingMovie' });
+    },
+  },
+  computed: {
+    ...mapGetters(['getMovieToBooking', 'getMoviesBooking']),
+  },
+  mounted() {
+    this.booking = true;
+  },
 };
 </script>
 
