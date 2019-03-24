@@ -16,14 +16,10 @@
         >
           <CarouselMovies/>
         </b-carousel>
-        <p>
+        <p class="link">
           <a @click="showModal = true">Bande annonce</a>
         </p>
-        <Modal
-          :linkMovie="getMoviesSheet[slide].linkMovie"
-          v-if="showModal"
-          @close="showModal = false"
-        ></Modal>
+        <Modal :title="getMoviesSheet[slide].title" v-if="showModal" @close="showModal = false"></Modal>
       </b-col>
     </b-row>
     <b-row align-v="center">
@@ -81,5 +77,12 @@ export default {
   padding: 20px;
   box-shadow: 0px 0px 2px cornflowerblue;
   border-radius: 10px;
+}
+.link {
+  color: #007bff;
+}
+.link:hover {
+  color: #0056b3;
+  cursor: pointer;
 }
 </style>

@@ -13,7 +13,7 @@ export default new Vuex.Store({
     },
     moviesSheet: [
       {
-        linkMovie: 'https://youtu.be/dqZe-1eG9r8',
+        linkMovie: 'https://www.youtube.com/embed/dqZe-1eG9r8',
         director: 'Martin Provost',
         score: '5',
         title: 'SÉRAPHINE',
@@ -24,6 +24,7 @@ export default new Vuex.Store({
           "En 1912, le collectionneur allemand Wilhelm Uhde, premier acheteur de Picasso et découvreur du douanier Rousseau, loue un appartement à Senlis pour écrire et se reposer de sa vie parisienne. Il prend à son service une femme de ménage, Séraphine, 48 ans. Quelque temps plus tard, il remarque chez des notables locaux une petite toile peinte sur bois. Sa stupéfaction est grande d'apprendre que l'auteur n'est autre que Séraphine. S'instaure alors une relation poignante et inattendue entre le marchand d'art d'avant-garde et la femme de ménage visionnaire.",
       },
       {
+        linkMovie: 'https://www.youtube.com/embed/v8h4kI7gWxI',
         director: 'Denis Dercourt',
         score: '4',
         actors: ' Vincent Perez, Jérémie Renier, Aurélien Recoing',
@@ -34,6 +35,7 @@ export default new Vuex.Store({
           "La relation de deux frères dont le plus jeune est passionné de batailles historiques, au point d'être coupé de la réalité et de ne plus vivre qu'à travers les jeux de rôles. À la demande de leur mère, Mathieu, l'aîné, va tenter de sortir Paul de cet univers mystérieux et secret où la frontière entre jeu et réalité n'existe pas toujours.Pour y parvenir, il n'aura d'autre choix que d'y basculer à son tour... ",
       },
       {
+        linkMovie: 'https://www.youtube.com/embed/zVZ5McbsEHs',
         director: 'Nils Tavernier',
         score: '5',
         actors: 'Jacques Gamblin, Laetitia Casta, Bernard Le Coq',

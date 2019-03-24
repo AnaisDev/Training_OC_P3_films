@@ -66,6 +66,12 @@ export default {
   font-size: 0.8em;
   border-top: 0.5px solid rgba(255, 255, 255, 0.2);
 }
+@media all and (max-width: 576px) {
+  .footer {
+    margin-bottom: 160px;
+    padding-bottom: 40px;
+  }
+}
 </style>
 
 
