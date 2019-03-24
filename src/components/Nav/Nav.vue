@@ -1,6 +1,39 @@
 <template>
-  <div class="Nav">
-    <b-navbar toggleable="md" type="dark" fixed>
+  <b-container fluid class="Nav">
+    <b-row>
+      <b-navbar toggleable="md" type="dark" sticky class="desktop">
+        <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+        <b-col cols="12">
+          <b-collapse is-nav id="nav_collapse">
+            <b-navbar-nav>
+              <b-nav-item to="/">
+                <i class="fas fa-home"></i>
+              </b-nav-item>
+              <b-nav-item to="/films">FILMS</b-nav-item>
+              <b-nav-item to="/reserver">RÉSERVER</b-nav-item>
+              <b-nav-item to="/pratique">PRATIQUE</b-nav-item>
+              <b-nav-item to="/actualites">ACTUALITÉS</b-nav-item>
+              <b-nav-item to="/association">CONTACT</b-nav-item>
+            </b-navbar-nav>
+
+            <b-navbar-nav class="ml-auto">
+              <b-nav-form>
+                <b-form-input
+                  v-if="btnSearch"
+                  size="sm"
+                  class="mr-sm-2 input-search"
+                  type="text"
+                  placeholder="Rechercher"
+                />
+                <b-button @click="search()" size="sm" class="my-2 my-sm-0 btn-search" type="submit">
+                  <i class="fas fa-search"></i>
+                </b-button>
+              </b-nav-form>
+            </b-navbar-nav>
+          </b-collapse>
+        </b-col>
+      </b-navbar>
+      <!-- <b-navbar toggleable="md" type="dark" fixed="bottom" class="mobile">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
       <b-collapse is-nav id="nav_collapse">
@@ -30,8 +63,9 @@
           </b-nav-form>
         </b-navbar-nav>
       </b-collapse>
-    </b-navbar>
-  </div>
+      </b-navbar>-->
+    </b-row>
+  </b-container>
 </template>
 
 <script>
@@ -52,10 +86,10 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-b-navbar {
-  position: fixed;
-}
+<style scoped lang="scss">
+@import '@/assets/custom.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
 .Nav {
   display: flex;
   justify-content: space-around;
@@ -87,6 +121,13 @@ b-navbar {
 .navbar-toggler,
 button {
   margin: auto;
+}
+@media all and (max-width: 576px) {
+  .navbar-collapse {
+    width: 400%;
+    margin-left: -300%;
+    background-color: $navy-blue;
+  }
 }
 </style>
 

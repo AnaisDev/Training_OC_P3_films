@@ -14,7 +14,27 @@
               </b-button>
             </div>
             <div>
-              <b-embed type="iframe" aspect="16by9" :src="linkMovie" allowfullscreen/>
+              <b-embed
+                v-if="title==='SÉRAPHINE'"
+                type="iframe"
+                aspect="16by9"
+                src="https://www.youtube.com/embed/dqZe-1eG9r8"
+                allowfullscreen
+              />
+              <b-embed
+                v-if="title==='DEMAIN DÈS L\'AUBE'"
+                type="iframe"
+                aspect="16by9"
+                src="https://www.youtube.com/embed/zVZ5McbsEHs"
+                allowfullscreen
+              />
+              <b-embed
+                v-if="title==='LE FACTEUR CHEVAL'"
+                type="iframe"
+                aspect="16by9"
+                src="https://www.youtube.com/embed/v8h4kI7gWxI"
+                allowfullscreen
+              />
             </div>
           </div>
         </div>
@@ -25,7 +45,7 @@
 <script>
 export default {
   name: 'Modal',
-  props: { linkMovie: String },
+  props: { title: String },
 };
 </script>
 <style scoped lang="scss">
