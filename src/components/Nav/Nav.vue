@@ -143,11 +143,6 @@ button {
     flex-direction: column !important;
     text-align: center;
   }
-  // .navbar-collapse {
-  //   width: 400%;
-  //   margin-left: -300%;
-  //   background-color: $navy-blue;
-  // }
 }
 </style>
 

@@ -40,8 +40,12 @@
               <p class="date">DU 5 AU 8 AOÛT</p>
             </b-col>
             <b-col cols="2">
-              <b-button v-if="!navbarMobile" @click="openNavbarMobile()">O</b-button>
-              <b-button v-if="navbarMobile" @click="closeNavbarMobile()">X</b-button>
+              <b-button variant="outline-primary" v-if="!navbarMobile" @click="openNavbarMobile()">
+                <i class="fas fa-bars"></i>
+              </b-button>
+              <b-button variant="outline-primary" v-if="navbarMobile" @click="closeNavbarMobile()">
+                <i class="fas fa-times"></i>
+              </b-button>
             </b-col>
           </b-row>
         </b-col>
