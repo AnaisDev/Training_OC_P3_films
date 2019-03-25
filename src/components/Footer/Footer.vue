@@ -68,8 +68,8 @@ export default {
 }
 @media all and (max-width: 576px) {
   .footer {
-    margin-bottom: 160px;
-    padding-bottom: 40px;
+    margin-bottom: 180px;
+    padding-bottom: 60px;
   }
 }
 </style>

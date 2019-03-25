@@ -33,37 +33,35 @@
           </b-collapse>
         </b-col>
       </b-navbar>
-      <!-- <b-navbar toggleable="md" type="dark" fixed="bottom" class="mobile">
-      <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-      <b-collapse is-nav id="nav_collapse">
-        <b-navbar-nav>
-          <b-nav-item to="/">
-            <i class="fas fa-home"></i>
-          </b-nav-item>
-          <b-nav-item to="/films">FILMS</b-nav-item>
-          <b-nav-item to="/reserver">RÉSERVER</b-nav-item>
-          <b-nav-item to="/pratique">PRATIQUE</b-nav-item>
-          <b-nav-item to="/actualites">ACTUALITÉS</b-nav-item>
-          <b-nav-item to="/association">CONTACT</b-nav-item>
-        </b-navbar-nav>
-
-        <b-navbar-nav class="ml-auto">
-          <b-nav-form>
-            <b-form-input
-              v-if="btnSearch"
-              size="sm"
-              class="mr-sm-2 input-search"
-              type="text"
-              placeholder="Rechercher"
-            />
-            <b-button @click="search()" size="sm" class="my-2 my-sm-0 btn-search" type="submit">
-              <i class="fas fa-search"></i>
-            </b-button>
-          </b-nav-form>
-        </b-navbar-nav>
-      </b-collapse>
-      </b-navbar>-->
+      <!-- Navbar mobile -->
+      <b-col cols="12">
+        <b-navbar type="dark" sticky class="mobile">
+          <b-navbar-nav>
+            <b-nav-item to="/">
+              <i class="fas fa-home"></i>
+            </b-nav-item>
+            <b-nav-item to="/films">FILMS</b-nav-item>
+            <b-nav-item to="/reserver">RÉSERVER</b-nav-item>
+            <b-nav-item to="/pratique">PRATIQUE</b-nav-item>
+            <b-nav-item to="/association">CONTACT</b-nav-item>
+          </b-navbar-nav>
+          <b-navbar-nav class="ml-auto">
+            <b-nav-form>
+              <b-form-input
+                v-if="btnSearch"
+                size="sm"
+                class="mr-sm-2 input-search"
+                type="text"
+                placeholder="Rechercher"
+              />
+              <b-button @click="search()" size="sm" class="my-2 my-sm-0 btn-search" type="submit">
+                <i class="fas fa-search"></i>
+              </b-button>
+            </b-nav-form>
+          </b-navbar-nav>
+        </b-navbar>
+      </b-col>
     </b-row>
   </b-container>
 </template>
@@ -122,11 +120,28 @@ export default {
 button {
   margin: auto;
 }
+@media all and (max-width: 5000px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+}
 @media all and (max-width: 576px) {
-  .navbar-collapse {
-    width: 400%;
-    margin-left: -300%;
-    background-color: $navy-blue;
+  .mobile {
+    display: block;
+    max-width: 100%;
+    border-bottom: 1px solid cornflowerblue;
+    margin-bottom: 20px;
+  }
+  .desktop {
+    display: none;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column !important;
+    text-align: center;
   }
 }
 </style>

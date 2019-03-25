@@ -2,14 +2,15 @@
   <b-container fluid>
     <header class="header header-desktop">
       <b-row align-v="center" align-h="center">
+        <b-col xl="1" lg="1" class="desktop"></b-col>
         <b-col xl="2" lg="1" md="12" ms="12">
-          <p>
+          <p class="logo">
             <a href="/">
               <b-img src="~@/assets/logo.png" alt="Logo du festival"/>
             </a>
           </p>
         </b-col>
-        <b-col xl="10" lg="11" md="12" ms="12">
+        <b-col xl="9" lg="10" md="12" ms="12">
           <p class="title">FESTIVAL DES FILMS DE PLEIN AIR</p>
           <p class="date">DU 5 AU 8 AOÛT</p>
           <p>Projection de films d'auteur au parc Monceau à Paris.</p>
@@ -17,8 +18,13 @@
         </b-col>
       </b-row>
     </header>
-    <b-row>
-      <header class="header header-mobile">
+
+    <header class="header header-mobile">
+      <b-row align-v="center" align-h="center">
+        <b-col v-if="navbarMobile" cols="12">
+          <Nav/>
+        </b-col>
+
         <b-col cols="12">
           <b-row align-v="center" align-h="center">
             <b-col cols="3">
@@ -34,21 +40,40 @@
               <p class="date">DU 5 AU 8 AOÛT</p>
             </b-col>
             <b-col cols="2">
-              <Nav/>
+              <b-button variant="outline-primary" v-if="!navbarMobile" @click="openNavbarMobile()">
+                <i class="fas fa-bars"></i>
+              </b-button>
+              <b-button variant="outline-primary" v-if="navbarMobile" @click="closeNavbarMobile()">
+                <i class="fas fa-times"></i>
+              </b-button>
             </b-col>
           </b-row>
         </b-col>
-      </header>
-    </b-row>
+      </b-row>
+    </header>
   </b-container>
 </template>
 
 <script>
 import Nav from '../Nav/Nav.vue';
+
 export default {
   name: 'Header',
   components: {
     Nav,
+  },
+  data() {
+    return {
+      navbarMobile: false,
+    };
+  },
+  methods: {
+    closeNavbarMobile() {
+      this.navbarMobile = false;
+    },
+    openNavbarMobile() {
+      this.navbarMobile = true;
+    },
   },
 };
 </script>
@@ -81,33 +106,54 @@ header img {
   .header-mobile {
     display: none;
   }
+  .logo {
+    text-align: right;
+  }
   header img {
-    width: 140%;
-    margin-left: 80%;
+    width: 100%;
+  }
+}
+@media all and (max-width: 1400px) {
+  .logo {
+    text-align: right;
+  }
+  header img {
+    width: 125%;
   }
 }
 @media all and (max-width: 1199px) {
   header img {
     width: 350%;
-    margin-left: 70%;
+  }
+  .logo {
+    text-align: right;
   }
 }
 @media all and (max-width: 1000px) {
   .title {
     font-size: 2em;
   }
-  header img {
-    margin-left: 0%;
+  .desktop {
+    display: none;
   }
 }
 @media all and (max-width: 991px) {
   header img {
     width: 25%;
   }
+  .desktop {
+    display: none;
+  }
+  .logo {
+    text-align: center;
+  }
 }
 @media all and (max-width: 767px) {
   header img {
     width: 40%;
+  }
+  .desktop {
+    display: none;
   }
 }
 @media all and (max-width: 576px) {
@@ -117,18 +163,23 @@ header img {
   .header-mobile {
     display: block;
     position: fixed;
+    max-width: 100%;
     bottom: 0;
+    left: 0;
     background-color: $navy-blue;
     z-index: 8000;
     border-top: 1px solid cornflowerblue;
     .title {
-      font-size: 1.1em;
+      font-size: 1.2em;
     }
     img {
-      width: 200%;
+      width: 150%;
     }
     .navbar {
       padding: 0;
+    }
+    .desktop {
+      display: none;
     }
   }
 }
