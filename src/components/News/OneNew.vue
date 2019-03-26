@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 export default {
   name: 'OneNew',
   data() {
@@ -60,9 +60,13 @@ export default {
     ...mapGetters(['getNewsToRead']),
   },
   methods: {
+    ...mapActions(['fetchBreadcrumb']),
     getImgUrl(path) {
       return require('@/assets' + path);
     },
+  },
+  mounted() {
+    this.fetchBreadcrumb(this.$route.path);
   },
 };
 </script>

@@ -45,7 +45,7 @@ export default new Router({
       component: News,
     },
     {
-      path: '/association',
+      path: '/contact',
       name: 'contact',
       component: Contact,
     },

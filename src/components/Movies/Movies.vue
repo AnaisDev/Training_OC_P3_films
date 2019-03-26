@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 import CarouselMovies from './CarouselMovies.vue';
 import Modal from '../Modal.vue';
 import Sheet from './Sheet.vue';
@@ -61,12 +61,16 @@ export default {
     ...mapGetters(['getMoviesSheet']),
   },
   methods: {
+    ...mapActions(['fetchBreadcrumb']),
     onSlideStart(slide) {
       this.sliding = true;
     },
     onSlideEnd(slide) {
       this.sliding = false;
     },
+  },
+  mounted() {
+    this.fetchBreadcrumb(this.$route.path);
   },
 };
 </script>

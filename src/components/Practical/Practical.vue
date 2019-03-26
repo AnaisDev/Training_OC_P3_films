@@ -14,7 +14,8 @@
       </b-col>
       <b-col xl="4" lg="4" md="4" class="toGo">
         <h2>Comment venir :</h2>
-        <p>Transports en commun :
+        <p>
+          Transports en commun :
           <br>Ligne 1
           <br>Ligne3
         </p>
@@ -28,8 +29,15 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 export default {
   name: 'Practical',
+  methods: {
+    ...mapActions(['fetchBreadcrumb']),
+  },
+  mounted() {
+    this.fetchBreadcrumb(this.$route.path);
+  },
 };
 </script>
 

@@ -5,6 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    breadcrumb: '',
     movieToBooking: {
       date: '',
       time: '',
@@ -122,6 +123,9 @@ export default new Vuex.Store({
       let lastNews = state.news;
       return lastNews.slice(1);
     },
+    getBreadcrumb: state => {
+      return state.breadcrumb;
+    },
   },
   actions: {
     newMovieToBooking({ commit }, movie) {
@@ -130,6 +134,9 @@ export default new Vuex.Store({
     readNew({ commit }, news) {
       commit('NewsToRead', { data: news });
     },
+    fetchBreadcrumb({ commit }, breadcrumb) {
+      commit('NewBreadcrumb', { data: breadcrumb });
+    },
   },
   mutations: {
     MovieToBooking(state, payload) {
@@ -137,6 +144,9 @@ export default new Vuex.Store({
     },
     NewsToRead(state, payload) {
       Vue.set(state, 'newsToRead', payload.data);
+    },
+    NewBreadcrumb(state, payload) {
+      Vue.set(state, 'breadcrumb', payload.data);
     },
   },
 });

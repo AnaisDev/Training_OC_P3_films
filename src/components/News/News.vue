@@ -86,7 +86,7 @@ export default {
     ...mapGetters(['getOldNews', 'getLastNews']),
   },
   methods: {
-    ...mapActions(['readNew']),
+    ...mapActions(['readNew', 'fetchBreadcrumb']),
     getImgUrl(path) {
       return require('@/assets' + path);
     },
@@ -94,6 +94,9 @@ export default {
       this.readNew(news);
       this.$router.push({ name: 'new' });
     },
+  },
+  mounted() {
+    this.fetchBreadcrumb(this.$route.path);
   },
 };
 </script>
