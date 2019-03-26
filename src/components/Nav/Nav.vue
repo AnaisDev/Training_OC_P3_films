@@ -13,7 +13,7 @@
               <b-nav-item to="/reserver">RÉSERVER</b-nav-item>
               <b-nav-item to="/pratique">PRATIQUE</b-nav-item>
               <b-nav-item to="/actualites">ACTUALITÉS</b-nav-item>
-              <b-nav-item to="/association">CONTACT</b-nav-item>
+              <b-nav-item to="/contact">CONTACT</b-nav-item>
             </b-navbar-nav>
 
             <b-navbar-nav class="ml-auto">
@@ -44,7 +44,7 @@
             <b-nav-item to="/films">FILMS</b-nav-item>
             <b-nav-item to="/reserver">RÉSERVER</b-nav-item>
             <b-nav-item to="/pratique">PRATIQUE</b-nav-item>
-            <b-nav-item to="/association">CONTACT</b-nav-item>
+            <b-nav-item to="/contact">CONTACT</b-nav-item>
           </b-navbar-nav>
           <b-navbar-nav class="ml-auto">
             <b-nav-form>
