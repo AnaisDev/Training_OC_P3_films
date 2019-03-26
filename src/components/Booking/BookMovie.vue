@@ -35,19 +35,23 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 import Form from '../Form.vue';
 export default {
   name: 'BookMovie',
   components: { Form },
   computed: { ...mapGetters(['getMovieToBooking']) },
   methods: {
+    ...mapActions(['fetchBreadcrumb']),
     getImgUrl(path) {
       return require('@/assets' + path);
     },
   },
   data() {
     return {};
+  },
+  mounted() {
+    this.fetchBreadcrumb(this.$route.path);
   },
 };
 </script>

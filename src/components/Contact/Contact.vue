@@ -32,11 +32,18 @@
 
 <script>
 import Form from '../Form.vue';
+import { mapActions } from 'vuex';
 export default {
   name: 'Contact',
   components: { Form },
+  methods: {
+    ...mapActions(['fetchBreadcrumb']),
+  },
   data() {
     return {};
+  },
+  mounted() {
+    this.fetchBreadcrumb(this.$route.path);
   },
 };
 </script>

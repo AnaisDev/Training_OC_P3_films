@@ -15,6 +15,9 @@
           <p class="date">DU 5 AU 8 AOÛT</p>
           <p>Projection de films d'auteur au parc Monceau à Paris.</p>
           <Nav/>
+          <p>
+            <a :href="breadcrumb">/accueil{{getBreadcrumb}}</a>
+          </p>
         </b-col>
       </b-row>
     </header>
@@ -56,7 +59,7 @@
 
 <script>
 import Nav from '../Nav/Nav.vue';
-
+import { mapGetters } from 'vuex';
 export default {
   name: 'Header',
   components: {
@@ -65,6 +68,7 @@ export default {
   data() {
     return {
       navbarMobile: false,
+      breadcrumb: '',
     };
   },
   methods: {
@@ -75,6 +79,15 @@ export default {
       this.navbarMobile = true;
     },
   },
+  computed: {
+    ...mapGetters(['getBreadcrumb']),
+  },
+  watcher: {
+    getBreadcrumb(value) {
+      this.breadcrumb = value;
+    },
+  },
+  mounted() {},
 };
 </script>
 
@@ -111,6 +124,9 @@ header img {
   }
   header img {
     width: 100%;
+  }
+  .breadcrumb-dark {
+    text-align: center;
   }
 }
 @media all and (max-width: 1400px) {

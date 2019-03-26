@@ -49,7 +49,7 @@ export default {
     return {};
   },
   methods: {
-    ...mapActions(['newMovieToBooking']),
+    ...mapActions(['newMovieToBooking', 'fetchBreadcrumb']),
     bookMovie(movie) {
       this.newMovieToBooking(movie);
       this.$router.push({ name: 'bookingMovie' });
@@ -60,6 +60,7 @@ export default {
   },
   mounted() {
     this.booking = true;
+    this.fetchBreadcrumb(this.$route.path);
   },
 };
 </script>
