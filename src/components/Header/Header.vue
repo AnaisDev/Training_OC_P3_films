@@ -2,15 +2,15 @@
   <b-container fluid>
     <header class="header header-desktop">
       <b-row align-v="center" align-h="center">
-        <b-col xl="1" lg="1" class="desktop"></b-col>
-        <b-col xl="2" lg="1" md="12" ms="12">
+        <b-col xl="2" lg="1" class="desktop"></b-col>
+        <b-col xl="1" lg="1" md="12" ms="12">
           <p class="logo">
             <a href="/">
               <b-img src="~@/assets/logo.png" alt="Logo du festival"/>
             </a>
           </p>
         </b-col>
-        <b-col xl="9" lg="10" md="12" ms="12">
+        <b-col xl="8" lg="10" md="12" ms="12">
           <p class="title">FESTIVAL DES FILMS DE PLEIN AIR</p>
           <p class="date">DU 5 AU 8 AOÛT</p>
           <p>Projection de films d'auteur au parc Monceau à Paris.</p>
@@ -19,6 +19,7 @@
             <a :href="breadcrumb">/accueil{{getBreadcrumb}}</a>
           </p>
         </b-col>
+        <b-col xl="1" class="desktop-xl"></b-col>
       </b-row>
     </header>
 
@@ -123,7 +124,10 @@ header img {
     text-align: right;
   }
   header img {
-    width: 100%;
+    width: 250%;
+  }
+  .breadcrumb-dark {
+    text-align: center;
   }
   .breadcrumb-dark {
     text-align: center;
@@ -134,10 +138,16 @@ header img {
     text-align: right;
   }
   header img {
-    width: 125%;
+    width: 300%;
+  }
+  .desktop-xl {
+    display: block;
   }
 }
 @media all and (max-width: 1199px) {
+  .desktop-xl {
+    display: none;
+  }
   header img {
     width: 350%;
   }
