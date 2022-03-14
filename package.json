@@ -1,13 +1,13 @@
 {
-  "name": "films",
+  "name": "training_oc_p3_films",
   "version": "0.1.0",
-  "author": "Anaïs <anais.github@gmail.com>",
+  "author": "AnaisDev",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "rm -r -f ./dist && vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "node scripts/gh-pages-deploy.js"
+    "deploy": "node ./gh-pages-deploy.mjs"
   },
   "dependencies": {
     "bootstrap-vue": "2.21.2",

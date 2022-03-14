@@ -1,8 +1,8 @@
-# OC_P3_Prototype website for a film festival in Paris
+# OC_P3_Website prototype for a film festival in Paris
 
 This project was created as part of the front-end application developer training with Openclassrooms in 2019.
 
-The goal was to create specifications and a prototype website for an outdoor film festival in Paris.
+The goal was to create specifications and a website prototype for an outdoor film festival in Paris.
 
 Required skills :
 
@@ -17,4 +17,4 @@ Required skills :
 
 ## Prototype website
 
-[prototype](https://AnaisDev.github.io/films-plein-air/maquette/)
+[prototype](https://anaisdev.github.io/Training_OC_P3_films/)
