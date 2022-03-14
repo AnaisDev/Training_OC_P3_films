@@ -1,29 +1,20 @@
-# films
+# OC_P3_Prototype website for a film festival in Paris
 
-## Project setup
-```
-npm install
-```
+This project was created as part of the front-end application developer training with Openclassrooms in 2019.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+The goal was to create specifications and a prototype website for an outdoor film festival in Paris.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Required skills :
 
-### Run your tests
-```
-npm run test
-```
+- List the features requested by a client
+- Analyze of a specification
+- Write detailed project specifications
+- Choose a suitable technical solution from among the existing solutions if relevant
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Specifications
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[specifications](./cdc.pdf)
+
+## Prototype website
+
+[prototype](https://AnaisDev.github.io/films-plein-air/maquette/)
